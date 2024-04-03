@@ -1,0 +1,236 @@
+header>h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600px;
+    font-family: 'comic sans ms';
+    color: #ff3838;
+    animation: warna 9s infinite;
+}
+
+@keyframes warna {
+    0% { color: rgb(120, 231, 29); 
+        text-shadow: -1px 1px 0 rgb(120, 231, 29),
+                 -2px 2px 0 rgb(120, 231, 29),
+                 -3px 4px 0 rgb(120, 231, 29),
+                 -4px 4px 5px rgba(0, 0, 0,.5),
+                 -5px 5px 10px rgba(0, 0, 0,.5),
+                 -6px 6px 20px rgba(0, 0, 0,.5),
+                 -7px 7px 25px rgba(0, 0, 0,.5);
+        transition: 10s;}
+    45% { color: blue; 
+        text-shadow: -1px 1px 0 blue,
+                -2px 2px 0 blue,
+                -3px 4px 0 blue,
+                -4px 4px 5px rgba(0, 0, 0,.5),
+                -5px 5px 10px rgba(0, 0, 0,.5),
+                -6px 6px 20px rgba(0, 0, 0,.5),
+                -7px 7px 25px rgba(0, 0, 0,.5);
+        transition: 10s;}
+    75% { color: #ff3838;
+        text-shadow: -1px 1px 0 #c02727,
+                     -2px 2px 0 #c02727,
+                     -3px 4px 0 #c02727,
+                     -4px 4px 5px rgba(0, 0, 0,.5),
+                     -5px 5px 10px rgba(0, 0, 0,.5),
+                     -6px 6px 20px rgba(0, 0, 0,.5),
+                     -7px 7px 25px rgba(0, 0, 0,.5);
+        transition: 10s;}
+    
+    100% { color: orange; 
+        text-shadow: -1px 1px 0 orange,
+                -2px 2px 0 orange,
+                -3px 4px 0 orange,
+                -4px 4px 5px rgba(0, 0, 0,.5),
+                -5px 5px 10px rgba(0, 0, 0,.5),
+                -6px 6px 20px rgba(0, 0, 0,.5),
+                -7px 7px 25px rgba(0, 0, 0,.5);
+        transition: 10s;}
+}
+
+.main-container {
+    display: flex;
+}
+
+.container-item {
+    width: 100%;
+    padding: 24px;
+}
+
+.container-item>h2 {
+    text-align: center;
+}
+
+.container-item section h3 {
+    text-align: left;
+    font-size: 17px;
+}
+
+ol li {
+    font-size: 15.5px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section p {
+    font-size: 15.5px;
+    text-align: justify;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.container-result {
+    text-align: center;
+    background-color: aliceblue;
+    padding-top: 8px;
+    padding-bottom: 24px;
+}
+
+.container-result-aksi {
+    text-align: left;
+}
+
+.container-form {
+    text-align: left;
+    background-color: aliceblue;
+    padding: 24px;
+}
+
+.container-form>div {
+    padding: 8px;
+    line-height: 20px;
+}
+
+.container-form>div i {
+    width: 25px;
+    height: 25px;
+    border: 0px;
+}
+
+.container-form>div img {
+    width: 24px;
+    height: 25px;
+    transform: translateY(20%);
+}
+
+.form-item {
+    height: 24px;
+    border: 0px;
+    width: 92%;
+    border-radius: 8px;
+    background-color: darkseagreen;
+}
+
+button {
+    border: 0px;
+    height: 32px;
+    padding-right: 24px;
+    padding-left: 24px;
+    background-color: darkgray;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#calculate-button {
+    background-color: coral;
+    color: white;
+}
+
+.app {
+    text-align: center;
+}
+
+.app div img {
+    width: 130px;
+}
+
+/* Menentukan lebar minimum untuk desktop */
+@media only screen and (min-width: 992px) {
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .container-item {
+      width: 48%;
+    }
+  
+    .container-item:nth-child(odd) {
+      margin-right: 20px;
+    }
+  
+    .container-form {
+      margin-bottom: 20px;
+    }
+  
+    .container-result {
+      margin-top: 20px;
+    }
+  
+    .container-result-aksi {
+      margin-top: 20px;
+    }
+  
+    .app {
+      margin-top: 20px;
+    }
+  }
+    
+    /* Menentukan lebar maksimum untuk mobile */
+  @media only screen and (max-width: 767px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    .container-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .container-item:nth-child(odd) {
+      margin-right: 0;
+    }
+  
+    .container-result,
+    .container-result-aksi,
+    .app {
+      margin-top: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 450px) {
+    header>h1 {
+      text-align: center;
+      font-size: 25px;
+      font-weight: 600px;
+  }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .container-item {
+      width: 100%;
+      padding: 2px;
+  }
+
+    .container-form>div img {
+      width: 24px;
+      height: 25px;
+      transform: translateY(20%);
+  }
+
+  .form-item {
+      height: 24px;
+      border: 0px;
+      width: 90%;
+  }
+
+  button {
+    border: 0px;
+    margin-top: 7px;
+    height: 32px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
